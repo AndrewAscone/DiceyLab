@@ -19,7 +19,7 @@ public class Bins {
 
     public void addRollToBin(int rollTotal){
         bins.put(rollTotal, bins.get(rollTotal) + 1);
-
+        //this.numberOfRolls++;
     }
 
     public Integer getBin(int rollTotal){ //getBin (OF VALUE)
