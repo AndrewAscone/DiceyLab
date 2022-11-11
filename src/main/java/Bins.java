@@ -2,9 +2,9 @@ import java.util.TreeMap;
 
 public class Bins {
 
-    Integer numberOfRolls;
+    public Integer numberOfRolls = 0;
 
-    Integer diceRoll;
+    public Integer diceRoll = 0;
 
     private final TreeMap<Integer, Integer> bins;
 
@@ -19,14 +19,18 @@ public class Bins {
 
     public void addRollToBin(int rollTotal){
         bins.put(rollTotal, bins.get(rollTotal) + 1);
-        //this.numberOfRolls++;
+        this.numberOfRolls++;
     }
 
     public Integer getBin(int rollTotal){ //getBin (OF VALUE)
         return bins.get(rollTotal);
     }
 
-    public Integer getBinValue(int rollTotal){
-        return bins.put(rollTotal, bins.get(rollTotal));
+    public Integer getNumberOfBins(){
+        return bins.size();
+    }
+
+    public float percentageOfBin(int rollTotal){
+        return bins.get(rollTotal)/(float)numberOfRolls;
     }
 }

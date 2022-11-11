@@ -21,4 +21,8 @@ public class Dice {
         return sum;
     }
 
+    public Integer getDiceCount(){
+        return numDice;
+    }
+
 }
