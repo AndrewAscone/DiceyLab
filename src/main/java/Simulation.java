@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Simulation {
 
     public static Integer numDice = 0;
@@ -21,8 +23,10 @@ public class Simulation {
     public static void main(String[] args) {
         int numDice = 2;
         int totalRolls = 1000000;
-
         Simulation sim = new Simulation(numDice, totalRolls);
+
+//        numDice = sim.getDiceToRoll();
+//        totalRolls = sim.getNumberOfRolls();
 
         sim.runSim();
 
@@ -55,5 +59,21 @@ public class Simulation {
             //System.out.println("Bin index " + container.getBin(value) + " currently holds " + container.getBinValue(value));
         }
     }
+
+//    public Integer getDiceToRoll(){
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("How many dice should be rolled?");
+//        numDice = scanner.nextInt();
+//        return numDice;
+//
+//
+//    }
+//
+//    public Integer getNumberOfRolls(){
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("And how many times should we roll the dice?");
+//        totalRolls = scanner.nextInt();
+//        return totalRolls;
+//    }
 
 }
