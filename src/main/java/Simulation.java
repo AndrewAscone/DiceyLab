@@ -44,6 +44,8 @@ public class Simulation {
     }
 
     public void printResult(){
+        System.out.println("***\nSimulation of " + numDice + " dice tossed for " + totalRolls + " times\n***\n");
+
         for (int i = numDice; i <= upperLimit; i++) {
             String str = String.format("%2d" + " :" + " %9d: %.2f %s", i, container.getBin(i), container.percentageOfBin(i), printStars(i));
             System.out.println(str);
